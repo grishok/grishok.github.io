@@ -1,0 +1,58 @@
+<script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Задача 2.25</title>
+
+<style>
+p {color: #4c6271;
+        font-family: Arial; 
+        font-size: 7em;
+        margin: 20px auto;
+        text-shadow: -4px -2px 0 #ece2ca, -6px -4px 0 #5a5a5a;
+        }
+  </style>
+  
+  <script>
+function func(){
+n=document.getElementById("a_znach").value;
+y=n;
+x=n%10;
+a=(n-x)/10;
+n=100*x+a;
+document.getElementById("a").innerHTML ="<p>"+"<span>2.25=</span> <span>"+ n+"</span></p>";
+x=(y-y%100)/100 ;
+a=y%100 ;
+n=10*a+x ;
+document.getElementById("b").innerHTML ="<p>"+"<span>2.27=</span> <span>"+ n+"</span><p>";
+x=((y-y%100)/10+y%10) 
+n=10*x+(y%100-y%10)/10 
+document.getElementById("c").innerHTML ="<p>"+"<span>2.29=</span> <span> "+ n+"</span></p>";
+x=((y-y%100)/10+y%10) 
+n=(y%100-y%10)*10+x 
+document.getElementById("d").innerHTML ="<p>"+"<span>2.31=</span> <span> "+ n+"</span></p>";
+x=y%10 
+a=(y%100-x)+(y-y%100)/100 
+n=100*x+a 
+document.getElementById("e").innerHTML ="<p>"+"<span>2.33=</span> <span> "+ n+"</span></p>";
+}
+<script>
+  <head>
+
+  <body>
+  
+<br>
+n=<input type="text" value="0" id="a_znach">
+<br>
+<br>
+<button onclick="func()">Считать</button>
+<br>
+<div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+<div id="e"></div>
+  <body>
+
+<html>
+  
