@@ -13,7 +13,7 @@ x=document.getElementById("a_znach").value;
 n=(x-x % 100)/100+(x%100*10); 
 document.getElementById("b").innerHTML ="<p>"+"2.27= "+ n+"</p>"; 
 x=document.getElementById("a_znach").value; 
-n=(x%100-x%10)*10+(x-x%100)/10+(x%10);
+n=(x%100-x%10)*100+(x-x%100)/10+(x%10);
 document.getElementById("c").innerHTML ="<p>"+"2.29= "+ n+"</p>"; 
 x=document.getElementById("a_znach").value;  
 n=(x-x%100)+(((x%100)%10)*10)+(x%100-x%10)/10;
