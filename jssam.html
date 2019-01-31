@@ -253,7 +253,7 @@ ctx.stroke();
 
 x=Number(document.getElementById("x_znach").value); 
 y=Number(document.getElementById("y_znach").value); 
-if ((x^2+y^2 => 100 && x^2+y^2 <= 1600) || (x^2+y^2 => 4900)) {
+if ((x^2+y^2 >= 100 && x^2+y^2 <= 1600) || (x^2+y^2 >= 4900)) {
 document.getElementById("otvet").innerHTML = "Точка в области";
 } else {
 document.getElementById("otvet").innerHTML = "Точка не в области"; 
