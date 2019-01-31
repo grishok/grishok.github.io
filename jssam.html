@@ -43,7 +43,7 @@ function er1(){
 var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
-drawpoint(44); 
+drawpoint(); 
 ctx.moveTo(320, 0);
 ctx.lineTo(320, 480);
 ctx.moveTo(0, 240);
@@ -253,7 +253,7 @@ ctx.stroke();
 
 x=Number(document.getElementById("x_znach").value); 
 y=Number(document.getElementById("y_znach").value); 
-if ((x^2+y*y >= 1 && x*x+y*y <= 16) || (x*x+y*y >= 49)) {
+if ((x*x+y*y >= 1 && x*x+y*y <= 16) || (x*x+y*y >= 49)) {
 document.getElementById("otvet").innerHTML = "Точка в области";
 } else {
 document.getElementById("otvet").innerHTML = "Точка не в области"; 
@@ -296,4 +296,3 @@ y=<input type="text" value="0" id="y_znach">
 
 <div id="otvet"></div>
 </html>
-	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
