@@ -42,18 +42,17 @@ ctx.fillRect(0, 0, 640, 480);
 function er1(){
 var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
-ctx.beginPath();
-ctx.moveTo(320, 0);
-ctx.lineTo(320, 480);
-ctx.moveTo(0, 240);
-ctx.lineTo(640, 240); 
-ctx.strokeStyle = 'black'
-ctx.stroke();
-ctx.rect(320, 240, Math.sqrt(x_znach), Math.sqrt(x_znach) );
-ctx.stroke();
+var squarearea = document.getElementById('x_znach').value;
+var circlearea = document.getElementById('y_znach').value;
+var squareside = Math.sqrt(squarearea);
+var radius = Math.sqrt(circlearea/Math.PI);
+if (2*radius <= squareside) {
+document.getElementById("otvet").innerHTML = "Круг поместился";
+} else {
+document.getElementById("otvet").innerHTML = "Круг не поместился";}
+//alert(radius);
 }
 	
-
 </script> 
 </head> 
 <body> 
