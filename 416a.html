@@ -39,6 +39,9 @@ var ctx = canvas.getContext('2d');
 ctx.fillStyle = "white";
 ctx.fillRect(0, 0, 640, 480);
 }
+function getRadians(degrees) {
+	return (Math.PI/180)*degrees;
+}
 function er1(){
 var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
@@ -46,6 +49,11 @@ var squarearea = document.getElementById('x_znach').value;
 var circlearea = document.getElementById('y_znach').value;
 var squareside = Math.sqrt(squarearea);
 var radius = Math.sqrt(circlearea/Math.PI);
+var kruy = 300 - (squareside/2)
+ctx.beginPath();
+ctx.strokeRect(kruy, kruy, squareside, squareside);
+ctx.arc(300, 300, radius, 0, getRadians(360));
+ctx.stroke();
 if (2*radius <= squareside) {
 document.getElementById("otvet").innerHTML = "Круг поместился";
 } else {
@@ -60,6 +68,7 @@ document.getElementById("otvet").innerHTML = "Круг не поместился
 площадь круга=<input type="text" value="0" id="y_znach"> 
 <a href="#" onclick="clean()" class="button purple">Очистить</a>
 <a href="#" onclick="er1()" class="button purple">4.16а</a>
+<a href="#" onclick="er2()" class="button purple">4.16б</a>
 
 <br>
 	<canvas width='640' height='480' id='example'>Обновите браузер</canvas>
