@@ -45,22 +45,24 @@ function getRadians(degrees) {
 function er1(){
 var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
-var trianglerearea = document.getElementById('x_znach').value;
+var trianglearea = document.getElementById('x_znach').value;
 var circlearea = document.getElementById('y_znach').value;
 var triangleside = 2*Math.sqrt(trianglearea/Math.sqrt(3));
 var radius = Math.sqrt(circlearea/Math.PI);
-var kruy = 300 - (squareside/2);
+
 ctx.beginPath();
-ctx.strokeRect(kruy, kruy, squareside, squareside);
 ctx.arc(300, 300, radius, 0, getRadians(360));
+ctx.moveTo(300, 300+radius-triangleside*Math.sqrt(3)/2);
+ctx.lineTo(300-(triangleside/2), 300+radius);
+ctx.lineTo(300+(triangleside/2), 300+radius);
+ctx.closePath();
 ctx.stroke();
-if (2*radius <= squareside) {
+if (6*radius <= triangleside*Math.sqrt(3)) {
 document.getElementById("otvet").innerHTML = "Круг поместился";
 } else {
 document.getElementById("otvet").innerHTML = "Круг не поместился";}
 //alert(radius);
 }
-
 </script> 
 </head> 
 <body> 
