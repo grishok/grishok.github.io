@@ -35,6 +35,17 @@
       }
       document.getElementById("otvet3").innerHTML = k / (b-a+1);
     }
+     function func4() {
+      a = Number(document.getElementById("a4_znach").value);
+      b = Number(document.getElementById("b4_znach").value);
+      var k = 0;
+      var i = a;
+      while (i < b+1) {
+        k = k + i*i;
+        i++;
+      }
+      document.getElementById("otvet4").innerHTML = k;
+    }
     function func5() {
       n = Number(document.getElementById("n_znach").value);
       var k = 0;
@@ -76,6 +87,15 @@
     b=<input type="text" value="0" id="b3_znach">
   <a href="#" onclick="func3()" class="button green text-blanco text-shadow-negra">♀</a>
   <div id="otvet3"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл 5.30г</h1> 
+    a=<input type="text" value="0" id="a4_znach">
+    b=<input type="text" value="0" id="b4_znach">
+  <a href="#" onclick="func4()" class="button green text-blanco text-shadow-negra">♀</a>
+  <div id="otvet4"></div>
 <br>
   <br>
   <br>
