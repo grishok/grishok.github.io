@@ -26,10 +26,11 @@
     function func3() {
       n = Number(document.getElementById("n3_znach").value);
       var k = 0;
-      var i = 1;
-          while (i => 1/6561) {
-        k = k + i;
-        i = i / 3;
+      var i = 0;
+      var a = 1;
+          while (i < 9) {
+        k = k + 1/a;
+        a = a * 3;
         i++;
       }
       document.getElementById("otvet3").innerHTML = k;
