@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function func1() {
+      exp = Number(document.getElementById("exp_znach").value);
+        var k = 1;
+        var i = 1;
+        var s = 0;
+      while (i < 10000) {
+          s = s + k;
+          k = k * exp / i;
+          i++;
+      }
+      document.getElementById("otvet1").innerHTML = s;
+    }
+   
+  </script>
+</head>
+
+<body>
+
+
+  <h1>Цикл экспонента</h1> exp(
+  <input type="text" value="0" id="exp_znach">
+  <a href="#" onclick="func1()" class="button red text-blanco text-shadow-negra">♥</a>
+  <div id="otvet1"></div>
+
+</body>
+</html>
